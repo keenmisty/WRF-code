@@ -233,7 +233,7 @@ tile_lon_loop : &
 !     if(snowc(i,j).gt.0.)iseason=4
             CALL rc( rcx, ta, rad, rhchem, iland, &
                      iseason, numgas, wetflag, rainflag, highnh3, &
-                     iprt, moist(i,kts,j,p_qv), p8w(i,kts,j), config_flags%chem_opt )
+                     iprt, moist(i,kts,j,p_qv), p8w(i,kts,j), config_flags%chem_opt ) ! ------------------------------ call rc calculate
             if( config_flags%chem_opt /= MOZART_KPP .and. &
                 config_flags%chem_opt /= MOZCART_KPP .and. &
                 config_flags%chem_opt /= MOZART_MOSAIC_4BIN_KPP .and. &
@@ -243,7 +243,7 @@ tile_lon_loop : &
             else
                srfres(1:numgas) = rcx(1:numgas)
             end if
-            CALL deppart( rmol(i,j), ustar, rhchem, clwchem, iland, dvpart, dvfog )
+            CALL deppart( rmol(i,j), ustar, rhchem, clwchem, iland, dvpart, dvfog ) ! -------------------------------- call deppart
             ddvel0d(1:numgas) = 0.
             aer_res_def(i,j)  = 0.
             aer_res_zcen(i,j) = 0.
