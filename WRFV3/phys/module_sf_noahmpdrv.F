@@ -233,7 +233,7 @@ CONTAINS
     REAL,    DIMENSION( ims:ime,          jms:jme ), INTENT(OUT  ) ::  WGAPXY    ! within gap fraction
     REAL,    DIMENSION( ims:ime,          jms:jme ), INTENT(OUT  ) ::  TGVXY     ! under canopy ground temperature[K]
     REAL,    DIMENSION( ims:ime,          jms:jme ), INTENT(OUT  ) ::  TGBXY     ! bare ground temperature [K]
-    REAL,    DIMENSION( ims:ime,          jms:jme ), INTENT(OUT  ) ::  CHVXY     ! sensible heat exchange coefficient vegetated
+    REAL,    DIMENSION( ims:ime,          jms:jme ), INTENT(OUT  ) ::  CHVXY     ! sensible heat exchange coefficient vegetated ------- ! Need to be export
     REAL,    DIMENSION( ims:ime,          jms:jme ), INTENT(OUT  ) ::  CHBXY     ! sensible heat exchange coefficient bare-ground
     REAL,    DIMENSION( ims:ime,          jms:jme ), INTENT(OUT  ) ::  SHGXY     ! veg ground sen. heat [w/m2]   [+ to atm]
     REAL,    DIMENSION( ims:ime,          jms:jme ), INTENT(OUT  ) ::  SHCXY     ! canopy sen. heat [w/m2]   [+ to atm]
